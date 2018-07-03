@@ -1,0 +1,158 @@
+body{
+	background-color: #f3f3f3;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+
+.header{
+	background-color: #fff !important;
+	border-radius: 0;
+	border: 0;
+	box-shadow: 0 0 4px #444;
+}
+
+.footer{
+	background-color: #333;
+	height: 50px;
+	text-align: center;
+	font-size: 13px;
+	margin-top: 30px;
+}
+.brand, .link{
+	color: #444 !important;
+	outline: none !important;
+}
+
+.brand:hover , .link:hover{
+	color: #111 !important;
+	outline: none !important
+} 
+
+.subheader{
+	color: #333;
+	font-size: 24px;
+	font-weight: 600;
+	text-align: center;
+	background: none;
+	margin: 20px 0;
+	letter-spacing: 1px;
+}
+
+.cardWrapper{
+	width: 450px;
+	max-width: 96%;
+	margin: 0 auto;
+	margin-top: 30px;
+	border-radius: 3px;
+	overflow: hidden;
+}
+.toDoCard{
+	width: calc(100% - 40px);
+	float: right;
+	background-color: #f8f8f8;
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.6);
+}
+.toDoUtility{
+	width: 40px;
+	float: right;
+}
+
+.toDoHeader{
+	background-color: #222;
+	color: #fff;
+	font-weight: 600;
+	height: 30px;
+	border-bottom-left-radius: 0px;
+	letter-spacing: 1px;
+	z-index: 1;
+}
+
+.border0{
+	border-radius: 0;
+}
+
+.toDoTitle{
+	display: inline;
+	width: 70%;
+	height: 100%;
+	background-color: #222;
+	text-align: center;
+	padding: 5px 7px;
+	float: left;
+	margin: 0 !important;
+}
+
+.right{
+	float: right;
+}
+.inline{
+	float: left;
+}
+
+.black{
+	background-color: #333;
+	color: #333;
+}
+
+.fw{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.reminderDate{
+	background-color: #333;
+	float: right;
+	margin-top: 10px;
+	border-top-left-radius: 5px;
+	padding: 2px 5px;
+	color: #fff;
+}
+
+.time{
+	padding: 5px;
+}
+.clear{
+	clear: both;
+}
+.markDone{
+	width: 30%;
+	display: inline;
+	font-size: 12px;
+	height: 100%;
+	border-radius: 4px;
+	background-color: #444;	
+	color: #fff;
+	line-height: 100%;
+	padding: 5px 7px;
+	border: 2px solid #444;
+
+}
+.toDoBody{
+	padding: 7px 10px;
+	color: #444;
+	min-height: 100px;
+	text-align: justify;
+}
+
+@media(max-width: 320px){
+
+	.toDoCard{
+		width: calc(100% - 30px);
+	}
+	.toDoTitle{
+		width: 65%;
+	}
+	.markDone{
+		width: 35%;
+	}
+	.toDoUtility{
+		width: 30px;
+	}
+}

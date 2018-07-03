@@ -3,6 +3,7 @@ const express 	= require('express'),
 	mongoose 	= require('mongoose'),
 	cors 		= require('cors'),
 	bodyParser 	= require('body-parser');
+const config 	= require('../config');
 
 const app = express();
 
@@ -18,7 +19,9 @@ const UserModel = require('./api/models/User'),
 const routes = require('./api/routes/Routes')(app);
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/ToDoList');
+
+const {APP, DB:{host, port, name}} = config;
+mongoose.connect(`mongodb://${host}:${port}/${name}`);
 
 
 app.all("/*", (req, res, next)=> {
@@ -47,5 +50,5 @@ app.use( (req, res) => {
 });
 
 app.listen(PORT, ()=>{
-	console.log("Server is listening on port "+PORT);
+	console.log("Server is listening on port "+ app.SERVER_PORT);
 })

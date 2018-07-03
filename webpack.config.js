@@ -2,7 +2,7 @@ var HTMLWebpackPlugin = require('html-webpack-plugin');
 var combineLoaders = require('webpack-combine-loaders');
 
 var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-	template : './src/index.html',
+	template : './client/index.html',
 	filename : 'index.html',
 	inject 	 : 'body',
 });
@@ -11,13 +11,13 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 module.exports = {
 
 	 entry: {
-	 	index : __dirname + "/src/index.jsx"
+	 	index : __dirname + "/client/index.js"
 	 },
 
 	 module : {
 	 	rules : [
 	 		{
-				test    : /\.jsx$/,
+				test    : /\.js$/,
 				exclude : /node_modules/,
 				loader  : 'babel-loader'
 			},
